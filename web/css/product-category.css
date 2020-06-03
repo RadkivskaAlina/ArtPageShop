@@ -1,0 +1,17 @@
+.categories__wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.search__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;  
+}
+.search__wrapper label{
+    font-size: 13px;
+}
+.search__price{
+    display: flex;
+    flex-direction: row;
+}

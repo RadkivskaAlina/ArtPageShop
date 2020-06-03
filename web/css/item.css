@@ -1,0 +1,107 @@
+.products__wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.list-wrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 280px);
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 255px;
+    height: 350px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.product__image img{
+    max-width: 200px;
+    max-height: 150px;
+}
+
+.product_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.section_product__image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_product__image img{
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 10px;
+}
+.section_product__text{
+    padding: 20px;
+}
+.section_product__text p{
+    font-size: 14px;
+    color: #1a1a1a;
+}
+.news__wrapper{
+    margin: 10px;
+}
+.news__wrapper p{
+    color: #00c5c1;
+    font-size: 18px;
+}
+.product__title{
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.product__title :hover{
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #00c5c1;
+    text-align: center;
+}
+.product__submit a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #6327fc;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.product__submit :hover{
+    font-size: 18px;
+    text-decoration: none;
+    color: #00c5c1;
+    text-align: center;
+}
+
+.about__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    display: flex;
+}
+.page__image img{
+    margin: 5px;
+    max-width: 50px;
+    max-height: 50px;
+}
+.page__text span{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.page__text p{
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #1a1a1a;
+}

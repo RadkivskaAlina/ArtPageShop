@@ -1,0 +1,150 @@
+DROP TABLE IF EXISTS page;
+CREATE TABLE page(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+meta_title VARCHAR(255) DEFAULT '',
+meta_description TEXT,
+short_content TEXT,
+content TEXT,
+status INT(1) DEFAULT 0,
+category_id INT(1) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS page_category;
+CREATE TABLE page_category(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+meta_title VARCHAR(255) DEFAULT '',
+meta_description TEXT,
+content TEXT,
+status INT(11) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS product;
+CREATE TABLE product(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+meta_title VARCHAR(255) DEFAULT '',
+meta_description TEXT,
+short_content TEXT,
+content TEXT,
+in_stock INT(11) DEFAULT 0,
+category_id INT(11) DEFAULT 0,
+status INT(11) DEFAULT 0,
+price INT(11) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS product_category;
+CREATE TABLE product_category(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+meta_title VARCHAR(255) DEFAULT '',
+meta_description TEXT,
+content TEXT,
+status INT(11) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS order;
+CREATE TABLE order(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+surname VARCHAR(255) DEFAULT '',
+phone VARCHAR(255) DEFAULT '',
+email  VARCHAR(255) DEFAULT '',
+delivery_id INT(11) DEFAULT 0,
+payment_id INT(11) DEFAULT 0,
+sum INT(11) DEFAULT 0,
+count INT(11) DEFAULT 0,
+products TEXT,
+status INT(1) DEFAULT 1,
+date_create Int(11) DEFAULT 0,
+date_update Int(11) DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE user(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+phone VARCHAR(255) DEFAULT '',
+email  VARCHAR(255) DEFAULT '',
+passsword  VARCHAR(255) DEFAULT '',
+status INT(1) DEFAULT 0,
+role INT(2) DEFAULT 0,
+last_visit INT(11) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS block;
+CREATE TABLE block(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+content TEXT,
+status INT(11) DEFAULT 0,
+image VARCHAR(255) DEFAULT '',
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS setting;
+CREATE TABLE setting(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+value TEXT,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS comment;
+CREATE TABLE comment(
+id INT NOT NULL AUTO_INCREMENT,
+parent_id INT(11) DEFAULT 0,
+object_id INT (11) DEFAULT 0,
+name VARCHAR (255) DEFAULT '',
+email VARCHAR (255) DEFAULT '',
+comment TEXT,
+status INT(1) DEFAULT  1,
+date_create INT(11) DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS delivery;
+CREATE TABLE delivery(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+value TEXT,
+price INT(11) DEFAULT 0,
+status INT(11) DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS payment;
+CREATE TABLE payment(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+value TEXT,
+status INT(11) DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS manufacture;
+CREATE TABLE manufacture(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) DEFAULT '',
+image VARCHAR(255) DEFAULT '',
+status INT(2) DEFAULT 1,
+pos INT(11) DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+ALTER TABLE product ADD manufacture_id INT(11) DEFAULT 0;
+
+ALTER TABLE user ADD first_name VARCHAR(255) DEFAULT '';
+ALTER TABLE user ADD second_name VARCHAR(255) DEFAULT '';

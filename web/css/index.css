@@ -1,0 +1,119 @@
+.section_one__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.section_one__images{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.section_one__images__first_item img{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 250px;
+    padding: 10px
+}
+.section_one__images__second_item img{
+    max-height: 350px;
+    padding: 10px
+}
+.section_one__text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+.section_one__title{
+    margin: 10px;
+    color: #000;
+    font-size: 20px;
+}
+.section_one__description p{
+    margin: 10px;
+    color: #000;
+    font-size: 13px;
+}
+.section_one__submit a{
+    padding: 5px 15px;
+    background-color: #00c5c1;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.section_one__submit button{
+    padding: 5px 15px;
+    background-color: #00c5c1;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.section_one__submit{
+    display: flex;
+    margin: 30px 10px;
+    transition: all 0.2s ease-in-out;
+}
+.section_one__submit :hover{
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.3);
+}
+.section_two__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    justify-items: center;
+}
+.section_two__categories{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    position: sticky;
+    min-width: 230px; 
+    height: 100%;
+}
+.section_two__categories__title p{
+    background-color: #00c5c1;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 18px;
+}
+.section_two__categories__list{
+    color: #000;
+    font-size: 14px;
+}
+.section_two__categories__list ul {  
+    list-style-position: inside;
+    padding: 20px;
+    list-style-type: none;
+}
+.section_two__categories li{
+    margin-bottom: 10px;
+}
+.section_two__categories li :hover{
+    color: #00c5c1;
+    text-decoration: none;
+}
+.section_two__title p{
+    padding: 5px 20px;
+    font-size: 30px;
+    color: #00c5c1;
+}
+.section_two__products{
+    width: 100%;
+}
+.list_view{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
